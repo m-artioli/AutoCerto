@@ -1,9 +1,10 @@
 {
   "version": 2,
-  "dgSpecHash": "nj1ATYQEKsmi8HEt8rGUdziFX4HkBxpn5S7TnzRHvspt1GKAm5OKLYOgbQHC+NQ8dAtqiovC7fuGn5HfDMIEHA==",
+  "dgSpecHash": "MsnljAlT3II=",
   "success": true,
   "projectFilePath": "/home/artioli/RiderProjects/SimpleBankAccount/AutoCerto/AutoCerto/AutoCerto.csproj",
   "expectedPackageFiles": [
+    "/home/artioli/.nuget/packages/bcrypt.net-next/4.0.3/bcrypt.net-next.4.0.3.nupkg.sha512",
     "/home/artioli/.nuget/packages/humanizer.core/2.14.1/humanizer.core.2.14.1.nupkg.sha512",
     "/home/artioli/.nuget/packages/microsoft.aspnetcore.openapi/8.0.19/microsoft.aspnetcore.openapi.8.0.19.nupkg.sha512",
     "/home/artioli/.nuget/packages/microsoft.bcl.asyncinterfaces/7.0.0/microsoft.bcl.asyncinterfaces.7.0.0.nupkg.sha512",

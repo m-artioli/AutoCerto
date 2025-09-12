@@ -134,3 +134,4 @@
 /home/artioli/RiderProjects/SimpleBankAccount/AutoCerto/AutoCerto/obj/Debug/net8.0/AutoCerto.pdb
 /home/artioli/RiderProjects/SimpleBankAccount/AutoCerto/AutoCerto/obj/Debug/net8.0/AutoCerto.genruntimeconfig.cache
 /home/artioli/RiderProjects/SimpleBankAccount/AutoCerto/AutoCerto/obj/Debug/net8.0/ref/AutoCerto.dll
+/home/artioli/RiderProjects/SimpleBankAccount/AutoCerto/AutoCerto/bin/Debug/net8.0/BCrypt.Net-Next.dll
