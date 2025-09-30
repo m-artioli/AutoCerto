@@ -203,9 +203,6 @@ body {
 .black { background: #333; }
 
 /* Estilos para formulários */
-.form-section {
-  padding: 20px;
-}
 
 .user-form {
   max-width: 500px;
