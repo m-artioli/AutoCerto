@@ -1,0 +1,483 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, sans-serif;
+}
+
+body {
+  overflow: hidden;
+}
+
+.container {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+/* Sidebar */
+.sidebar {
+  width: 220px;
+  background: #292929;
+  color: white;
+  padding: 20px 10px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: fixed;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow-y: auto;
+}
+
+/* Content area */
+.content {
+  flex: 1;
+  margin-left: 220px;
+  height: 100vh;
+  overflow-y: auto;
+  background: #f8f9fa;
+}
+
+.sidebar .logo {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.sidebar .logo img {
+  width: 150px;
+  margin-bottom: 10px;
+}
+
+.sidebar nav ul {
+  list-style: none;
+  width: 100%;
+}
+
+.sidebar nav ul li {
+  padding: 12px;
+  margin: 5px 0;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background 0.3s;
+  display: flex;
+  align-items: center;
+}
+
+.sidebar nav ul li img {
+  width: 16px;
+  height: 16px;
+  margin-right: 8px;
+}
+
+.sidebar nav ul li.active,
+.sidebar nav ul li:hover {
+  background: white;
+  color: #292929;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  background: #f9f9f9;
+  margin: 0;
+  padding: 20px;
+}
+
+.dashboard {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.content header {
+  margin-bottom: 30px;
+  padding: 20px;
+  background: white;
+  border-bottom: 1px solid #eee;
+}
+
+.content header h1 {
+  font-size: 28px;
+  color: #333;
+  margin-bottom: 5px;
+}
+
+.content header p {
+  color: #666;
+  font-size: 16px;
+}
+
+.cards {
+  display: flex;
+  gap: 15px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Seções principais dentro do content */
+.form-section {
+  padding: 20px;
+}
+
+.card {
+  flex: 1;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  min-width: 0;
+}
+
+.card h3 {
+  font-size: 16px;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.value {
+  font-size: 28px;
+  font-weight: bold;
+  margin: 5px 0;
+}
+
+.green { color: #0a9e2f; }
+.red { color: #d32f2f; }
+
+.info {
+  font-size: 14px;
+  color: #777;
+  margin-bottom: 15px;
+}
+
+.chart {
+  height: 60px;
+  border-radius: 8px;
+  background: linear-gradient(to top, rgba(0,0,0,0.05), transparent);
+  position: relative;
+}
+
+.green-bg {
+  background: linear-gradient(to top, #c8f7d4, transparent);
+}
+
+.red-bg {
+  background: linear-gradient(to top, #f7c8c8, transparent);
+}
+
+.donut-chart {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 10px 0;
+}
+
+.circle {
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: conic-gradient(#333 0% 60%, #aaa 60% 100%);
+  mask: radial-gradient(circle, transparent 40%, black 41%);
+  -webkit-mask: radial-gradient(circle, transparent 40%, black 41%);
+}
+
+.legend {
+  font-size: 14px;
+  margin-top: 10px;
+  color: #555;
+}
+
+.dot {
+  display: inline-block;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  margin-right: 6px;
+}
+
+.gray { background: #aaa; }
+.black { background: #333; }
+
+/* Estilos para formulários */
+
+.user-form {
+  max-width: 500px;
+}
+
+.input-group {
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.input-group .icon {
+  position: absolute;
+  left: 15px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  z-index: 1;
+}
+
+.input-group input {
+  width: 100%;
+  padding: 15px 15px 15px 45px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background: white;
+  transition: border-color 0.3s;
+}
+
+.input-group input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.checkbox {
+  display: flex;
+  align-items: center;
+  margin: 20px 0;
+  font-size: 14px;
+  color: #555;
+}
+
+.checkbox input {
+  margin-right: 8px;
+}
+
+.btn {
+  width: 100%;
+  padding: 15px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.btn:hover {
+  background: #0056b3;
+}
+
+/* Links na sidebar */
+.sidebar nav ul li a {
+  color: inherit;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.sidebar nav ul li a:hover {
+  color: white;
+}
+
+/* Estilos específicos para página de cadastro */
+.cadastro-page {
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: radial-gradient(circle at center, #555, #222);
+  overflow: hidden;
+}
+
+/* Círculos decorativos para página de cadastro */
+.cadastro-page::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: -50px;
+  width: 200%;
+  height: 200%;
+  background: url("https://www.transparenttextures.com/patterns/circles.png");
+  opacity: 0.2;
+  background-size: 300px;
+}
+
+/* Caixa de formulário centralizada */
+.form-box {
+  background: white;
+  padding: 40px;
+  border-radius: 10px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+  width: 450px;
+  text-align: center;
+  position: relative;
+  z-index: 1;
+}
+
+.form-box .logo {
+  width: 60px;
+  margin-bottom: 10px;
+}
+
+.form-box h2 {
+  margin-bottom: 20px;
+  font-size: 22px;
+  color: #333;
+}
+
+/* Inputs estilo centralizado */
+.form-box .input-group {
+  display: flex;
+  align-items: center;
+  background: #f9f9f9;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 15px;
+}
+
+.form-box .input-group .icon {
+  margin-right: 8px;
+  font-size: 16px;
+}
+
+/* Estilo para ícones de imagem */
+.form-box .input-group img.icon {
+  width: 20px;
+  height: 20px;
+  margin-right: 8px;
+}
+
+.form-box .input-group input {
+  border: none;
+  outline: none;
+  background: transparent;
+  flex: 1;
+  font-size: 14px;
+}
+
+/* Checkbox estilo centralizado */
+.form-box .checkbox {
+  display: flex;
+  align-items: center;
+  font-size: 14px;
+  margin-bottom: 20px;
+  justify-content: center;
+}
+
+/* Botão estilo centralizado */
+.form-box .btn {
+  width: 100%;
+  padding: 12px;
+  background: #333;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.form-box .btn:hover {
+  background: #555;
+}
+
+/* Estilos específicos para o conteúdo de gerenciar */
+.gerenciar-content {
+  padding: 20px;
+  width: 100%;
+  max-width: none;
+}
+
+.gerenciar-content h2 {
+  margin-bottom: 5px;
+  font-size: 22px;
+  color: #333;
+}
+
+.gerenciar-content .date {
+  font-size: 14px;
+  color: gray;
+  margin-bottom: 20px;
+}
+
+.gerenciar-content .box {
+  margin-bottom: 25px;
+  padding: 20px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+  border-bottom: 1px solid #eee;
+}
+
+.gerenciar-content .box:last-of-type {
+  border: none;
+}
+
+.gerenciar-content .box h3 {
+  margin-bottom: 10px;
+  font-size: 18px;
+  color: #333;
+}
+
+.gerenciar-content .warning {
+  font-weight: bold;
+  margin: 10px 0;
+  color: #d9534f;
+}
+
+.gerenciar-content fieldset {
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  padding: 15px;
+  margin-top: 15px;
+  background: #f9f9f9;
+}
+
+.gerenciar-content legend {
+  padding: 0 8px;
+  font-size: 14px;
+  font-weight: bold;
+  color: #333;
+}
+
+.gerenciar-content .grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 15px;
+  margin-top: 10px;
+}
+
+.gerenciar-content input {
+  padding: 12px;
+  border: 1px solid #ddd;
+  background: white;
+  border-radius: 4px;
+  font-size: 14px;
+  width: 100%;
+}
+
+.gerenciar-content input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 2px rgba(0, 123, 255, 0.25);
+}
+
+.gerenciar-content .btn {
+  padding: 6px 8px;
+  background: #000;
+  color: white;
+  font-size: 12px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: auto;
+  display: inline-block;
+  margin-top: 10px;
+  transition: background 0.3s;
+}
+
+.gerenciar-content .btn:hover {
+  background: #333;
+}
