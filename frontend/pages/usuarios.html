@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gerenciamento de Usuários</title>
+
+    <style>
+        body {
+            background: #1e1e1e;
+            color: white;
+            font-family: Arial, Helvetica, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #111;
+            padding: 15px;
+            text-align: center;
+            font-size: 22px;
+            font-weight: bold;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        button {
+            background: #007bff;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            font-size: 15px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        button:hover {
+            background: #005fcc;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 15px;
+            background: #2b2b2b;
+        }
+
+        th, td {
+            padding: 12px;
+            border: 1px solid #444;
+            text-align: left;
+        }
+
+        th {
+            background: #333;
+        }
+
+     
+        #modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(0, 0, 0, 0.7);
+            display: none;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .modal-content {
+            background: #2b2b2b;
+            padding: 20px;
+            width: 350px;
+            border-radius: 8px;
+        }
+
+        .modal-content h2 {
+            margin-top: 0;
+        }
+
+        .modal-content input,
+        .modal-content select {
+            width: 100%;
+            padding: 8px;
+            margin: 8px 0 12px;
+            border: 1px solid #555;
+            border-radius: 5px;
+            background: #1e1e1e;
+            color: white;
+        }
+
+        .btn-red {
+            background: #d9534f;
+        }
+
+        .btn-red:hover {
+            background: #b52b27;
+        }
+
+        .actions button {
+            margin-right: 6px;
+        }
+    </style>
+</head>
+<body>
+
+<header>Gerenciamento de Usuários</header>
+
+<div class="container">
+    <button onclick="openModal()">+ Novo Usuário</button>
+
+    <table>
+        <thead>
+            <tr>
+                <th>ID</th>
+                <th>Nome</th>
+                <th>Email</th>
+                <th>Nível</th>
+                <th>Ações</th>
+            </tr>
+        </thead>
+        <tbody id="tabela">
+        </tbody>
+    </table>
+</div>
+
+
+<div id="modal">
+    <div class="modal-content">
+        <h2>Novo Usuário</h2>
+
+        <label>Nome:</label>
+        <input type="text" id="nome">
+
+        <label>Email:</label>
+        <input type="email" id="email">
+
+        <label>Senha:</label>
+        <input type="password" id="senha">
+
+        <label>Nível:</label>
+        <select id="nivel">
+            <option value="Administrador">Administrador</option>
+            <option value="Usuário">Usuário</option>
+        </select>
+
+        <button onclick="salvarUsuario()">Salvar</button>
+        <button class="btn-red" onclick="closeModal()">Cancelar</button>
+    </div>
+</div>
+
+<script>
+    let id = 1;
+
+    function openModal() {
+        document.getElementById("modal").style.display = "flex";
+    }
+
+    function closeModal() {
+        document.getElementById("modal").style.display = "none";
+    }
+
+    function salvarUsuario() {
+        const nome = document.getElementById("nome").value;
+        const email = document.getElementById("email").value;
+        const senha = document.getElementById("senha").value;
+        const nivel = document.getElementById("nivel").value;
+
+        if (!nome || !email || !senha) {
+            alert("Preencha todos os campos!");
+            return;
+        }
+
+        const tabela = document.getElementById("tabela");
+
+        const linha = `
+            <tr>
+                <td>${id}</td>
+                <td>${nome}</td>
+                <td>${email}</td>
+                <td>${nivel}</td>
+                <td class="actions">
+                    <button class="btn-red" onclick="remover(this)">Excluir</button>
+                </td>
+            </tr>
+        `;
+
+        tabela.innerHTML += linha;
+        id++;
+
+        closeModal();
+
+        document.getElementById("nome").value = "";
+        document.getElementById("email").value = "";
+        document.getElementById("senha").value = "";
+    }
+
+    function remover(elemento) {
+        elemento.parentElement.parentElement.remove();
+    }
+</script>
+
+</body>
+</html>

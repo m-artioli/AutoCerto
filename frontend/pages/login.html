@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Login - AutoCerto</title>
+  <link rel="stylesheet" href="assets/styles/global.css">
+  <style>
+    body {
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background: radial-gradient(circle at center, #555, #222);
+      overflow: hidden;
+      font-family: Arial, sans-serif;
+    }
+
+    .login-box {
+      background: #fff;
+      padding: 40px;
+      width: 420px;
+      border-radius: 10px;
+      box-shadow: 0 4px 15px rgba(0,0,0,0.25);
+      text-align: center;
+      position: relative;
+    }
+
+    .login-box img.logo {
+      width: 80px;
+      margin-bottom: 10px;
+    }
+
+    .login-box h2 {
+      font-size: 22px;
+      margin-bottom: 25px;
+      color: #333;
+    }
+
+    .input-group {
+      display: flex;
+      align-items: center;
+      background: #f1f1f1;
+      border: 1px solid #ccc;
+      padding: 12px;
+      border-radius: 6px;
+      margin-bottom: 15px;
+    }
+
+    .input-group img.icon {
+      width: 20px;
+      height: 20px;
+      margin-right: 10px;
+    }
+
+    .input-group input {
+      border: none;
+      background: none;
+      outline: none;
+      width: 100%;
+      font-size: 15px;
+    }
+
+    .btn-login {
+      width: 100%;
+      padding: 12px;
+      background: #333;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+      transition: 0.3s;
+    }
+
+    .btn-login:hover {
+      background: #555;
+    }
+
+    .extra-links {
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .extra-links a {
+      color: #000000;
+      text-decoration: underline;
+      cursor: pointer;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="login-box">
+    <img src="../assets/imagens/logoBranco.png" class="logo" alt="AutoCerto">
+
+    <h2>ENTRAR NA SUA CONTA</h2>
+
+    <form onsubmit="window.location.href='index.html'; return false;">
+      <div class="input-group">
+        <img class="icon" src="../assets/imagens/cad1.png" alt="Usuário">
+        <input type="text" placeholder="Usuário" required>
+      </div>
+
+      <div class="input-group">
+        <img class="icon" src="../assets/imagens/cad2.png" alt="Senha">
+        <input type="password" placeholder="Senha" required>
+      </div>
+
+      <button type="submit" class="btn-login">Entrar</button>
+    </form>
+
+    <div class="extra-links">
+      <p><a href="pages/cadastro.html">Criar nova conta</a></p>
+    </div>
+  </div>
+</body>
+</html>
