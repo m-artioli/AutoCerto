@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AutoCerto Dashboard</title>
+  <link rel="stylesheet" href="assets/styles/global.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="assets/imagens/logo.png" alt="AutoCerto Logo">
+      </div>
+      <nav>
+        <ul>
+          <li class="active">Início</li>
+          <li><img src="assets/imagens/produto.png" alt="Produtos"> Produtos</li>
+          <li><img src="assets/imagens/pagamento.png" alt="Pagamento"> Pagamento</li>
+          <li><img src="assets/imagens/estatistica.png" alt="Estatística"> Estatística</li>
+          <li><img src="assets/imagens/compra.png" alt="Compra"> Compra</li>
+          <li><a href="pages/gerenciar.html"><img src="assets/imagens/gerenciar.png" alt="Gerenciar Usuário"> Gerenciar Usuário</a></li>
+          <li><img src="assets/imagens/configuracao.png" alt="Configuração"> Configuração</li>
+          <li><img src="assets/imagens/sair.png" alt="Sair"> Sair</li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="content">
+      <header>
+
+        <h1>Bem-vindo, ...</h1>
+        <p>Dashboard - Gestão de Estoque</p>
+      </header>
+      
+      <section class="cards" style="display: flex; gap: 15px; width: 100%; justify-content: space-between;">
+        <div class="card" style="flex: 1; min-width: 0;">
+          <h3>Produtos em estoque</h3>
+          <p class="value green">30,412</p>
+          <p class="info green">↑ 1,5 % vs last Month</p>
+          <div class="chart green-bg"></div>
+        </div>
+        
+        <div class="card" style="flex: 1; min-width: 0;">
+          <h3>Total em compras</h3>
+          <p class="value red">12,980</p>
+          <p class="info red">↓ 0,7 % vs last Month</p>
+          <div class="chart red-bg"></div>
+        </div>
+        
+        <div class="card" style="flex: 1; min-width: 0;">
+          <h3>Resumo Estoque</h3>
+          <p class="value green">2,753</p>
+          <p class="info green">↑ 114 novos produtos comparado mês passado</p>
+          <div class="donut-chart">
+            <div class="circle"></div>
+          </div>
+          <div class="legend">
+            <span><span class="dot gray"></span> novos usuarios</span><br>
+            <span><span class="dot black"></span> antigos usuarios</span>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
+</html>

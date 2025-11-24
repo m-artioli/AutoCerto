@@ -1,0 +1,6 @@
+@AutoCerto_HostAddress = http://localhost:5132
+
+GET {{AutoCerto_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

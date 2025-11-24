@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerenciar Usuário - AutoCerto</title>
+  <link rel="stylesheet" href="../assets/styles/global.css">
+</head>
+<body>
+  <div class="container">
+    <!-- Sidebar -->
+    <aside class="sidebar">
+      <div class="logo">
+        <img src="../assets/imagens/logo.png" alt="AutoCerto Logo">
+      </div>
+      <nav>
+        <ul>
+          <li><a href="../index.html">Início</a></li>
+          <li><img src="../assets/imagens/produto.png" alt="Produtos"> <a href="products.html">Produtos</a></li>
+          <li><img src="../assets/imagens/pagamento.png" alt="Pagamento"> Pagamento</li>
+          <li><img src="../assets/imagens/estatistica.png" alt="Estatística"> Estatística</li>
+          <li><img src="../assets/imagens/compra.png" alt="Compra"> Compra</li>
+          <li class="active"><img src="../assets/imagens/gerenciar.png" alt="Gerenciar Usuário"> Gerenciar Usuário</li>
+          <li><img src="../assets/imagens/configuracao.png" alt="Configuração"> Configuração</li>
+          <li><img src="../assets/imagens/sair.png" alt="Sair"> Sair</li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <main class="content">
+      <header>
+        <h1>Gerenciar Usuário</h1>
+        <p>Configurações e Gerenciamento de Conta</p>
+      </header>
+      
+      <div class="gerenciar-content">
+        <h2>Configurações da Conta</h2>
+        <p class="date">Set 2025</p>
+
+        <section class="box">
+          <h3>Editar E-mail</h3>
+          <p><strong>E-mail Atual:</strong> exemplo@gmail.com</p>
+          <p class="warning">IMPORTANTE!!! A ATUALIZAÇÃO SOMENTE SERÁ EFETUADA APÓS A VALIDAÇÃO DO NOVO E-MAIL.</p>
+
+          <fieldset>
+            <legend>Novo E-mail</legend>
+            <div class="grid-2">
+              <input type="email" placeholder="Endereço de e-mail novo">
+              <input type="email" placeholder="Confirmar endereço de e-mail novo">
+            </div>
+            <button class="btn">SALVAR</button>
+            <div style="clear: both;"></div>
+          </fieldset>
+        </section>
+
+        <section class="box">
+          <h3>Redefinir Senha</h3>
+          <p>Confirmar e-mail para redefinir senha:</p>
+          <fieldset>
+            <legend>Nova Senha</legend>
+            <div class="grid-2">
+              <input type="password" placeholder="Senha nova">
+              <input type="password" placeholder="Confirmar senha nova">
+            </div>
+            <button class="btn">SALVAR</button>
+            <div style="clear: both;"></div>
+          </fieldset>
+        </section>
+      </div>
+    </main>
+  </div>
+</body>
+</html>
+
+
